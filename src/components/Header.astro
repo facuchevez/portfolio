@@ -20,19 +20,14 @@ const navItems = [
     {
         title: "Contacto",
         label: "contacto",
-        url: "mailto:miduga@gmail.com",
+        url: "mailto:facundochevez@gmail.com",
     },
 ]
 ---
 
-<header
-    class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
-    >
-    <nav
-        class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
-    >
-        {
-        navItems.map((link) => (
+<header class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2" >
+    <nav class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center">
+        {navItems.map((link) => (
             <a
             class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
             aria-label={link.label}
@@ -40,8 +35,7 @@ const navItems = [
             >
             {link.title}
             </a>
-        ))
-        }
+        ))}
         <ThemeToggle />
     </nav>
 </header>
@@ -54,13 +48,13 @@ const navItems = [
         const callback = (entries: any[]) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                navItems.forEach((item) => {
-                    if (item.getAttribute("aria-label") == entry.target.id) {
-                    item.classList.add("text-yellow-500")
-                    } else {
-                    item.classList.remove("text-yellow-500")
-                    }
-                })
+                    navItems.forEach((item) => {
+                        if (item.getAttribute("aria-label") == entry.target.id) {
+                            item.classList.add("text-yellow-500")
+                        } else {
+                            item.classList.remove("text-yellow-500")
+                        }
+                    })
                 }
             })
         }

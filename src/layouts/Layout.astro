@@ -32,7 +32,6 @@ const { description, title } = Astro.props
 			dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
 		>
 		</div>
-
 		<Header />
 		<slot />
 		<Footer />
@@ -46,6 +45,7 @@ const { description, title } = Astro.props
 				font-family: "Onest Variable", system-ui, sans-serif;
 				scroll-behavior: smooth;
 			}
+
 			body {
 				color: rgba(17, 17, 17, 0.9);
 				display: flex;
@@ -56,30 +56,33 @@ const { description, title } = Astro.props
 
 			@media (prefers-reduced-motion: reduce) {
 				html {
-					scroll-behavior: auto;
+				scroll-behavior: auto;
 				}
 			}
+
 			@media (prefers-color-scheme: dark) {
 				body {
 					color: rgba(255, 255, 255, 0.9);
 				}
 			}
+
 			#header-nav {
 				animation: blur linear both 0.5s;
 				animation-timeline: scroll();
 				animation-range: 0 500px;
 			}
+
 			@keyframes blur {
 				to {
-					backdrop-filter: blur(20px);
-					border-width: 1px;
-					border-color: rgba(0, 0, 0);
-					padding: 0.25rem 0.75rem;
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					background-color: rgb(229, 229, 229);
-					border-radius: 9999px;
+				backdrop-filter: blur(20px);
+				border-width: 1px;
+				border-color: rgba(0, 0, 0);
+				padding: 0.25rem 0.75rem;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				background-color: rgb(229, 229, 229);
+				border-radius: 9999px;
 				}
 			}
 

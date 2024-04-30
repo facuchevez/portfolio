@@ -1,6 +1,9 @@
 ---
 import GitHub from "./icons/GitHub.astro"
 import NextJS from "./icons/NextJS.astro"
+import ReactJS from "./icons/ReactJS.astro"
+import Sass from "./icons/Sass.astro"
+import Css from "./icons/Css.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
@@ -16,24 +19,38 @@ const TAGS = {
         class: "bg-[#003159] text-white",
         icon: Tailwind,
     },
+    REACT: {
+        name: "React JS",
+        class: "bg-[#003159] text-white",
+        icon: ReactJS,
+    },
+    SASS: {
+        name: "Sass",
+        class: "bg-[#49243a] text-white",
+        icon: Sass,
+    },
+    CSS: {
+        name: "CSS",
+        class: "bg-[#052c4e] text-white",
+        icon: Css,
+    },
+    
 }
 const PROJECTS = [
     {
-        title: "SVGL - A beautiful library with SVG logos",
-        description:
-        "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
+        title: "Sorteo",
+        description: "Aplicación para realizar sorteos. Creado desde cero con, React y Sass.",
         link: "https://svgl.vercel.app/",
         github: "https://github.com/pheralb/svgl",
         image: "/projects/svgl.webp",
-        tags: [TAGS.NEXT, TAGS.TAILWIND],
+        tags: [TAGS.REACT, TAGS.SASS],
     },
     {
-        title: "AdventJS - Retos de programación con JavaScript y TypeScript",
-        description:
-        "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
+        title: "Market",
+        description: "Simulación de una tienda online. Creada desde cero con React y CSS3.",
         link: "https://adventjs.dev",
         image: "/projects/adventjs.webp",
-        tags: [TAGS.NEXT, TAGS.TAILWIND],
+        tags: [TAGS.REACT, TAGS.CSS],
     },
 ]
 ---
