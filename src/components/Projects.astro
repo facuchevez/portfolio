@@ -1,6 +1,5 @@
 ---
 import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
 import ReactJS from "./icons/ReactJS.astro"
 import Sass from "./icons/Sass.astro"
 import Css from "./icons/Css.astro"
@@ -9,11 +8,6 @@ import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
 const TAGS = {
-    NEXT: {
-        name: "Next.js",
-        class: "bg-black text-white",
-        icon: NextJS,
-    },
     TAILWIND: {
         name: "Tailwind CSS",
         class: "bg-[#003159] text-white",
@@ -34,14 +28,14 @@ const TAGS = {
         class: "bg-[#052c4e] text-white",
         icon: Css,
     },
-    
 }
+
 const PROJECTS = [
     {
         title: "Sorteo",
-        description: "Aplicación para realizar sorteos. Creado desde cero con, React y Sass.",
-        link: "https://svgl.vercel.app/",
-        github: "https://github.com/pheralb/svgl",
+        description: "Aplicación para realizar sorteos. Creado desde cero con React y Sass.",
+        link: "",
+        github: "https://github.com/facuchevez/",
         image: "/projects/sorteo.webp",
         tags: [TAGS.REACT, TAGS.SASS],
     },
@@ -66,37 +60,36 @@ const PROJECTS = [
 
             <div class="w-full md:w-1/2 md:max-w-lg">
                 <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-                {title}
+                    {title}
                 </h3>
                 <div class="flex flex-wrap mt-2">
-                <ul class="flex flex-row mb-2 gap-x-2">
-                    {tags.map((tag) => (
-                        <li>
-                        <span
-                            class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-                        >
-                            <tag.icon class="size-4" />
-                            {tag.name}
-                        </span>
-                        </li>
-                    ))}
+                    <ul class="flex flex-row mb-2 gap-x-2">
+                        {tags.map((tag) => (
+                            <li>
+                            <span
+                                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                            >
+                                <tag.icon class="size-4" />
+                                {tag.name}
+                            </span>
+                            </li>
+                        ))}
                     </ul>
 
-                <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-                <footer class="flex items-end justify-start mt-4 gap-x-4">
-                    {github && (
-                        <LinkButton href={github}>
-                        <GitHub class="size-6" />
-                        Code
-                        
-                        </LinkButton>
-                    )}
-                    {link && (
-                        <LinkButton href={link}>
-                        <Link class="size-4" />
-                        Preview
-                        </LinkButton>
-                    )}
+                    <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+                    <footer class="flex items-end justify-start mt-4 gap-x-4">
+                        {github && (
+                            <LinkButton href={github}>
+                                <GitHub class="size-6" />
+                                Code
+                            </LinkButton>
+                        )}
+                        {link && (
+                            <LinkButton href={link}>
+                                <Link class="size-4" />
+                                Preview
+                            </LinkButton>
+                        )}
                     </footer>
                 </div>
             </div>
