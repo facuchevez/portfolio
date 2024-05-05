@@ -6,6 +6,8 @@ import Css from "./icons/Css.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import AstroIcon from "./icons/AstroIcon.astro"
+import Svelte from "./icons/Svelte.astro"
 
 const TAGS = {
     TAILWIND: {
@@ -28,9 +30,27 @@ const TAGS = {
         class: "bg-[#052c4e] text-white",
         icon: Css,
     },
+    ASTRO: {
+        name: "Astro",
+        class: "bg-[#252e62] text-white",
+        icon: AstroIcon,
+    },
+    SVELTE: {
+        name: "Svelte",
+        class: "bg-[#4e1502] text-white",
+        icon: Svelte,
+    }
 }
 
 const PROJECTS = [
+    {
+        title: "Spotify Clone",
+        description: "Spotify clone. Creado desde cero con Astro, Tailwind CSS, React.",
+        link: "",
+        github: "https://github.com/facuchevez/spotify-clone",
+        image: "/projects/spotify.webp",
+        tags: [TAGS.ASTRO, TAGS.REACT, TAGS.TAILWIND, TAGS.SVELTE],
+    },
     {
         title: "Sorteo",
         description: "Aplicación para realizar sorteos. Creado desde cero con React y Sass.",
@@ -42,7 +62,7 @@ const PROJECTS = [
     {
         title: "Market",
         description: "Simulación de una tienda online. Creada desde cero con React y CSS3.",
-        link: "https://6633cd5dc7beea1f88be5862--tourmaline-klepon-96aa91.netlify.app/",
+        link: "https://market-facuchevez.netlify.app/",
         github: "https://github.com/facuchevez/market",
         image: "/projects/market.webp",
         tags: [TAGS.REACT, TAGS.CSS],
